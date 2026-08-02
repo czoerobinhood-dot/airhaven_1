@@ -553,6 +553,43 @@
       ]
     },
 
+    {
+      id: gid('Product', 13),
+      slug: 'whack-a-mole-bounce-house',
+      name: 'Whack-a-Mole Bounce House',
+      description:
+        'A castle-style bounce house built around a Whack-a-Mole game, with a large slide and a roomy bouncing area. Two basketball hoops and two sticky targets turn one backyard setup into several games for children ages 3–8.',
+      productType: 'bounce-house',
+      category: 'bounce-houses',
+      collections: ['water-play', 'bounce-houses', 'new-arrivals'],
+      attributes: [
+        attr('brand', 'AirHaven'),
+        attr('age-range', '3–8 years'),
+        attr('inflated-size', '5.49 × 3.35 × 2.01 m (18 × 11 × 6.6 ft)'),
+        attr('play-zones', 'Whack-a-Mole game', 'Large slide', 'Bouncing area', '2 basketball hoops', '2 sticky targets'),
+        attr('usage', 'Outdoor play')
+      ],
+      media: [{
+        id: gid('ProductMedia', 13),
+        url: 'assets/photos/whack-a-mole-bounce-house.png',
+        alt: 'Whack-a-Mole Bounce House with slide set up on a lawn',
+        type: 'IMAGE',
+        sortOrder: 0
+      }],
+      channelListings: publishedEverywhere,
+      defaultVariant: 'AN-WAM-STD',
+      variants: [
+        {
+          id: gid('ProductVariant', 21),
+          sku: 'AN-WAM-STD',
+          name: 'Standard',
+          attributes: [attr('size', '18 × 11 × 6.6 ft')],
+          channelListings: [{ channel: CA, price: money(799, 'CAD') }, { channel: US, price: money(579, 'USD') }],
+          stocks: [{ warehouse: 'mississauga-on', quantity: 8 }, { warehouse: 'richmond-bc', quantity: 5 }]
+        }
+      ]
+    },
+
     /* ---------------------------- Car Travel ---------------------------- */
     {
       id: gid('Product', 6),
