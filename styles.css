@@ -99,6 +99,9 @@ img { display: block; max-width: 100%; }
 .locale-button:hover { color: var(--orange-600); }
 .locale-button svg { width: 12px; }
 .flag { display: grid; place-items: center; width: 22px; height: 16px; background: #fff; border: 1px solid var(--line); border-radius: 4px; font-size: 8px; font-weight: 800; color: #bc2431; }
+.language-control { gap: 0; }
+.language-control select { max-width: 150px; border: 0; background: transparent; color: inherit; cursor: pointer; font: inherit; font-weight: 700; }
+.language-control select:disabled { cursor: wait; opacity: .65; }
 
 /* -------------------------------- Header -------------------------------- */
 .site-header { position: sticky; top: 0; z-index: 30; background: rgba(255, 248, 239, .94); border-bottom: 1px solid var(--line); backdrop-filter: blur(14px); }

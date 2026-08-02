@@ -9,6 +9,7 @@
   <script src="assets/lucide.min.js" defer></script>
   <script src="data/catalog.js" defer></script>
   <script src="app.js" defer></script>
+  <script src="i18n.js" defer></script>
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -26,7 +27,7 @@
       <div class="utility-actions">
         <a href="#footer" aria-label="Instagram"><i data-lucide="instagram"></i></a>
         <button class="locale-button" type="button" id="channelButton" aria-label="Switch sales channel"><span class="flag" id="channelFlag">CA</span> <span id="channelLabel">Canada (CAD $)</span> <i data-lucide="chevron-down"></i></button>
-        <button class="locale-button" type="button">English <i data-lucide="chevron-down"></i></button>
+        <label class="locale-button language-control" for="languageSelect" data-no-translate><span class="sr-only">Language</span><select id="languageSelect" aria-label="Language"><option value="en">English</option></select></label>
       </div>
     </div>
   </div>
