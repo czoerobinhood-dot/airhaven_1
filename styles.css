@@ -255,6 +255,8 @@ img { display: block; max-width: 100%; }
 /* Real photography fills the frame; only vector placeholders get the box. */
 .product-media.is-photo { padding: 0; background: var(--ink); }
 .product-media.is-photo img { object-fit: cover; }
+.media-missing { width: 100%; height: 100%; display: grid; place-items: center; color: var(--ink-muted); }
+.media-missing svg { width: 28px; height: 28px; }
 .product-card:hover .product-media { box-shadow: var(--shadow-soft); }
 .product-card:hover .product-media img { transform: scale(1.05); }
 .compare { position: absolute; z-index: 2; top: 14px; right: 14px; display: flex; align-items: center; gap: 6px; padding: 5px 11px; background: rgba(255, 248, 239, .93); border-radius: var(--radius-pill); opacity: 0; font-size: 12px; font-weight: 700; cursor: pointer; transition: opacity .2s; }

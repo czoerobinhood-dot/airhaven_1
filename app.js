@@ -201,11 +201,17 @@ function saveState() {
  * photo treatment — no markup or CSS change required.
  */
 const isPhoto = url => !/\.svg(\?|$)/i.test(url);
+const hasUsablePhoto = product =>
+  Array.isArray(product.media) && product.media.some(media => typeof media?.url === 'string' && isPhoto(media.url));
+const merchandisingRank = product => (productStock(product) > 0 && hasUsablePhoto(product) ? 0 : 1);
 
 function productCardHTML(product) {
-  const media = product.media[0];
+  const media = product.media?.find(item => item?.url) ?? null;
   const soldOut = productStock(product) === 0;
-  const mediaClass = isPhoto(media.url) ? ' is-photo' : '';
+  const mediaClass = media && isPhoto(media.url) ? ' is-photo' : '';
+  const mediaContent = media
+    ? `<img src="${esc(media.url)}" alt="${esc(media.alt)}" loading="lazy">`
+    : '<span class="media-missing" aria-label="Image unavailable"><i data-lucide="image-off"></i></span>';
 
   let badge = '';
   if (soldOut) badge = '<span class="badge">Sold out</span>';
@@ -213,19 +219,24 @@ function productCardHTML(product) {
 
   return `
     <article class="product-card" data-slug="${esc(product.slug)}">
-      <div class="product-media${mediaClass}">${badge}<label class="compare"><input type="checkbox"> Compare</label><img src="${esc(media.url)}" alt="${esc(media.alt)}" loading="lazy"><button class="quick-view" type="button">Quick view</button></div>
+      <div class="product-media${mediaClass}">${badge}<label class="compare"><input type="checkbox"> Compare</label>${mediaContent}<button class="quick-view" type="button">Quick view</button></div>
       <h2>${esc(product.name)}</h2><p class="price">${priceLabel(product)}</p>
     </article>`;
 }
 
 function comparator(sort) {
-  if (sort === 'title-asc') return (a, b) => a.name.localeCompare(b.name);
-  if (sort === 'title-desc') return (a, b) => b.name.localeCompare(a.name);
+  let secondary;
+  if (sort === 'title-asc') secondary = (a, b) => a.name.localeCompare(b.name);
+  else if (sort === 'title-desc') secondary = (a, b) => b.name.localeCompare(a.name);
   // Saleor's ProductOrderField.PRICE sorts on the product's cheapest variant.
-  if (sort === 'price-asc') return (a, b) => priceRange(a).start - priceRange(b).start;
-  if (sort === 'price-desc') return (a, b) => priceRange(b).start - priceRange(a).start;
-  const order = featuredOrder();
-  return (a, b) => (order.get(a.slug) ?? Infinity) - (order.get(b.slug) ?? Infinity);
+  else if (sort === 'price-asc') secondary = (a, b) => priceRange(a).start - priceRange(b).start;
+  else if (sort === 'price-desc') secondary = (a, b) => priceRange(b).start - priceRange(a).start;
+  else {
+    const order = featuredOrder();
+    secondary = (a, b) => (order.get(a.slug) ?? Infinity) - (order.get(b.slug) ?? Infinity);
+  }
+
+  return (a, b) => merchandisingRank(a) - merchandisingRank(b) || secondary(a, b) || a.name.localeCompare(b.name);
 }
 
 function filterAndSort() {
@@ -248,24 +259,9 @@ function filterAndSort() {
     })
     .sort(comparator($('#sortSelect').value));
 
-  // With every category showing ("All"), the grid splits into one section per
-  // category — Water Castles, Splash Pads, Bounce Houses, Pumps & Care — each
-  // under its own heading. A chip narrows to one category, so no headings then.
-  const groups = CATALOG.categories.filter(category => results.some(p => p.category === category.slug));
-  const grouped = categoryFilter === 'all' && groups.length > 1;
-  grid.classList.toggle('grouped', grouped);
-  grid.innerHTML = grouped
-    ? groups
-        .map(category => {
-          const items = results.filter(product => product.category === category.slug);
-          return `
-            <section class="grid-group">
-              <h3 class="grid-group-head">${esc(category.name)} <span>${items.length}</span></h3>
-              <div class="product-grid">${items.map(productCardHTML).join('')}</div>
-            </section>`;
-        })
-        .join('')
-    : results.map(productCardHTML).join('');
+  // A flat grid preserves the in-stock-with-photo priority across categories.
+  grid.classList.remove('grouped');
+  grid.innerHTML = results.map(productCardHTML).join('');
   $('#resultCount').textContent = `${results.length} product${results.length === 1 ? '' : 's'}`;
   $('#emptyState').hidden = results.length !== 0;
   initIcons();
@@ -310,7 +306,8 @@ function renderStrips() {
     if (!collection) return;
     const products = collection.products
       .map(slug => productBySlug.get(slug))
-      .filter(product => product && inChannel(product));
+      .filter(product => product && inChannel(product))
+      .sort(comparator('featured'));
     container.innerHTML = products.map(productCardHTML).join('');
   });
   initIcons();
@@ -502,7 +499,7 @@ function searchProducts(query) {
       inChannel(product) &&
       (product.name.toLowerCase().includes(term) ||
         variantsInChannel(product).some(variant => variant.sku.toLowerCase().includes(term)))
-  );
+  ).sort(comparator('featured'));
 
   results.innerHTML = hits.length
     ? hits
