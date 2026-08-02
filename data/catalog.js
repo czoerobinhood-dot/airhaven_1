@@ -592,7 +592,7 @@
           sku: 'AN-WAM-STD',
           name: 'Standard',
           attributes: [attr('size', '18 × 11 × 6.6 ft')],
-          channelListings: [{ channel: CA, price: money(799, 'CAD') }, { channel: US, price: money(579, 'USD') }],
+          channelListings: [{ channel: CA, price: money(799, 'CAD') }, { channel: US, price: money(699, 'USD') }],
           stocks: [{ warehouse: 'mississauga-on', quantity: 8 }, { warehouse: 'richmond-bc', quantity: 5 }]
         }
       ]
