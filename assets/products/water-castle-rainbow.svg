@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Rainbow splash castle">
+  <g fill="none" stroke-linecap="round">
+    <path d="M92 236a108 108 0 0 1 216 0" stroke="#FF6B4A" stroke-width="13"/>
+    <path d="M110 236a90 90 0 0 1 180 0" stroke="#FFC53D" stroke-width="13"/>
+    <path d="M128 236a72 72 0 0 1 144 0" stroke="#3FBF7F" stroke-width="13"/>
+    <path d="M146 236a54 54 0 0 1 108 0" stroke="#17B8D4" stroke-width="13"/>
+  </g>
+  <rect x="118" y="236" width="164" height="96" rx="26" fill="#17B8D4"/>
+  <rect x="86" y="206" width="52" height="126" rx="24" fill="#0E9FBB"/>
+  <rect x="262" y="206" width="52" height="126" rx="24" fill="#0E9FBB"/>
+  <circle cx="112" cy="196" r="15" fill="#FFC53D"/>
+  <circle cx="288" cy="196" r="15" fill="#FFC53D"/>
+  <path d="M170 332v-42a30 30 0 0 1 60 0v42z" fill="#DFF4F8"/>
+  <path d="M186 332v-40a14 14 0 0 1 28 0v40z" fill="#0E9FBB"/>
+  <path d="M300 250c34 10 52 40 52 82" stroke="#FFC53D" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <rect x="60" y="326" width="280" height="34" rx="17" fill="#DFF4F8"/>
+  <path d="M74 344c18-9 36-9 54 0s36 9 54 0 36-9 54 0 36 9 54 0" stroke="#17B8D4" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <g fill="#7FD9E8">
+    <circle cx="128" cy="176" r="7"/>
+    <circle cx="200" cy="150" r="9"/>
+    <circle cx="272" cy="176" r="7"/>
+    <circle cx="164" cy="158" r="5"/>
+    <circle cx="236" cy="158" r="5"/>
+  </g>
+</svg>

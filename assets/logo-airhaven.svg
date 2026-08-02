@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252 64" role="img" aria-label="AirHaven">
+  <!--
+    Mark: a pressurised dome with a gate cut out of it.
+    Three cues carry the "air-filled" read at small sizes:
+      1. the silhouette bulges past a true circle — what an over-inflated
+         bladder actually does under pressure
+      2. radial welded seams running from the crown, the way these products
+         are heat-sealed
+      3. a vinyl sheen where a gloss highlight would fall
+    The dashed tether and yellow anchor echo the ground stakes in every box.
+  -->
+  <path d="M32 5c13.4 0 22.5 8.6 22.5 20.4 0 12.4-9.6 20.6-22.5 20.6S9.5 37.8 9.5 25.4C9.5 13.6 18.6 5 32 5z" fill="#E8620E"/>
+
+  <g stroke="#F5822F" stroke-width="2.2" stroke-linecap="round" opacity=".95" fill="none">
+    <path d="M32 6.2 C24 16 22.4 27.6 24.6 44.4"/>
+    <path d="M32 6.2 C40 16 41.6 27.6 39.4 44.4"/>
+  </g>
+
+  <path d="M25.6 46V36.2a6.4 6.4 0 0 1 12.8 0V46z" fill="#FFF8EF"/>
+  <path d="M28.8 33.6h6.4" stroke="#1196AE" stroke-width="4.4" stroke-linecap="round"/>
+
+  <ellipse cx="22.4" cy="16.6" rx="4.6" ry="6.6" fill="#fff" opacity=".3" transform="rotate(-24 22.4 16.6)"/>
+
+  <path d="M32 47v7.5" stroke="#23180F" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="0.1 4.6"/>
+  <circle cx="32" cy="58.6" r="3.6" fill="#F6BC3C"/>
+
+  <text x="74" y="45" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="37" fill="#23180F">Air<tspan fill="#E8620E">H</tspan>aven</text>
+</svg>

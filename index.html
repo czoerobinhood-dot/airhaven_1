@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AirHaven — inflatable backyard water parks for kids and inflatable car beds for travel. A local storefront demo.">
+  <title>AirHaven — Inflatable Water Parks &amp; Car Beds | Local Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="assets/lucide.min.js" defer></script>
+  <script src="data/catalog.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="demo-bar">LOCAL STOREFRONT DEMO <span>Orders are not processed</span></div>
+  <div class="announcement" aria-label="Store announcement">
+    <button class="announcement-arrow" id="announcementPrev" aria-label="Previous announcement"><i data-lucide="chevron-left"></i></button>
+    <a href="water-play.html" id="announcementText">Free shipping across Canada on orders over $99</a>
+    <button class="announcement-arrow" id="announcementNext" aria-label="Next announcement"><i data-lucide="chevron-right"></i></button>
+  </div>
+
+  <div class="utility-bar">
+    <div class="shell utility-inner">
+      <a href="#footer"><i data-lucide="badge-check"></i> 2-year seam warranty on every inflatable</a>
+      <div class="utility-actions">
+        <a href="#footer" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <button class="locale-button" type="button" id="channelButton" aria-label="Switch sales channel"><span class="flag" id="channelFlag">CA</span> <span id="channelLabel">Canada (CAD $)</span> <i data-lucide="chevron-down"></i></button>
+        <button class="locale-button" type="button">English <i data-lucide="chevron-down"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="header">
+    <div class="shell header-inner">
+      <button class="icon-button mobile-menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false"><i data-lucide="menu"></i></button>
+      <a class="brand" href="index.html" aria-label="AirHaven home"><img src="assets/logo-airhaven.svg" alt="AirHaven"></a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a class="active" href="index.html" aria-current="page">Home</a>
+        <a href="water-play.html">Kids Play</a>
+        <a href="car-travel.html">Car Travel</a>
+        <a href="accessories.html">Pumps &amp; Care</a>
+        <a href="#footer">Support</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="searchButton" aria-label="Search"><i data-lucide="search"></i></button>
+        <button class="icon-button desktop-only" aria-label="Account"><i data-lucide="user-round"></i></button>
+        <button class="icon-button cart-button" id="cartButton" aria-label="Open shopping bag"><i data-lucide="shopping-bag"></i><span id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-head"><strong>Menu</strong><button class="icon-button" data-close="mobileDrawer" aria-label="Close navigation"><i data-lucide="x"></i></button></div>
+    <nav aria-label="Mobile navigation">
+      <a href="index.html">Home <i data-lucide="chevron-right"></i></a>
+      <a href="water-play.html">Kids Play <i data-lucide="chevron-right"></i></a>
+      <a href="car-travel.html">Car Travel <i data-lucide="chevron-right"></i></a>
+      <a href="accessories.html">Pumps &amp; Care <i data-lucide="chevron-right"></i></a>
+      <a href="#footer">Support <i data-lucide="chevron-right"></i></a>
+    </nav>
+  </aside>
+  <div class="page-overlay" id="pageOverlay"></div>
+
+  <main id="main-content">
+    <section class="hero-photo wave-bottom" aria-labelledby="heroHeading">
+      <img src="assets/photos/castle-hero.jpg" alt="Children playing on an inflatable water castle set up on a backyard lawn" fetchpriority="high">
+      <div class="hero-photo-copy">
+        <div>
+          <p class="hero-tagline">Up in 4 minutes. Yours all summer.</p>
+          <h1 id="heroHeading">Turn the back lawn into a water park</h1>
+          <p class="hero-lede">Splash castles with a real slide, a catch pool and a sprinkler arch — delivered flat, inflated with the blower in the box.</p>
+          <div class="hero-actions">
+            <a class="button-primary" href="water-play.html">Shop water castles <i data-lucide="arrow-right"></i></a>
+            <a class="button-ghost" href="car-travel.html">Car beds</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="hero-tagline">Inflatables for the yard and the road</p>
+        <h1>Two things we build well</h1>
+        <p class="hero-lede">Water parks that fit a backyard, and beds that fit a car. Both inflate in minutes and pack down into a bag you can carry one-handed.</p>
+        <div class="hero-actions">
+          <a class="button-primary" href="water-play.html">Shop Kids Play</a>
+          <a class="button-ghost" href="car-travel.html">Shop Car Travel</a>
+        </div>
+      </div>
+      <div class="hero-cards">
+        <a class="hero-card hero-card--water" href="water-play.html">
+          <img src="assets/photos/castle-square.jpg" alt="">
+          <div><strong>Kids Play</strong><span>Water parks &amp; bounce houses</span></div>
+          <i data-lucide="arrow-right"></i>
+        </a>
+        <a class="hero-card hero-card--car" href="car-travel.html">
+          <img src="assets/photos/car-mattress-square.jpg" alt="">
+          <div><strong>Car Travel</strong><span>Beds that fit your back seat</span></div>
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="trust-row shell wave-bottom" aria-label="Why shop with us">
+      <div><i data-lucide="shield-check"></i><strong>ASTM &amp; CPSIA tested</strong><span>Every kids' product is lab certified</span></div>
+      <div><i data-lucide="timer"></i><strong>Up in minutes</strong><span>Pump included with most items</span></div>
+      <div><i data-lucide="truck"></i><strong>Free shipping over $99</strong><span>Ships from ON and BC warehouses</span></div>
+      <div><i data-lucide="life-buoy"></i><strong>2-year seam warranty</strong><span>Patch kit in every box</span></div>
+    </section>
+
+    <section class="shell strip-section" aria-labelledby="bestSellersHeading">
+      <div class="strip-head">
+        <div><h2 id="bestSellersHeading">Best sellers</h2><p>What families order most.</p></div>
+        <a class="strip-link" href="water-play.html">Browse Kids Play <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="product-strip" data-strip="best-sellers"></div>
+    </section>
+
+    <section class="split-banner shell">
+      <div class="split-banner-card split-banner-card--water wave-bottom">
+        <h3>Backyard, not a booking</h3>
+        <p>A splash castle costs less than three afternoons at the water park, and it is still there next summer.</p>
+        <a class="button-primary" href="water-play.html">See the castles</a>
+      </div>
+      <div class="split-banner-card split-banner-card--car wave-bottom">
+        <h3>Your back seat is a bed</h3>
+        <p>Flat, flocked and inflated off the 12V socket. Road trips, festivals, waiting out a long drive.</p>
+        <a class="button-ghost" href="car-travel.html">See the car beds</a>
+      </div>
+    </section>
+
+    <section class="shell strip-section" aria-labelledby="newArrivalsHeading">
+      <div class="strip-head">
+        <div><h2 id="newArrivalsHeading">New arrivals</h2><p>Just landed for the season.</p></div>
+        <a class="strip-link" href="accessories.html">Pumps &amp; Care <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="product-strip" data-strip="new-arrivals"></div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="shell footer-grid">
+      <section>
+        <img class="footer-logo" src="assets/logo-airhaven.svg" alt="AirHaven">
+        <p>AirHaven builds inflatable water parks for backyards and inflatable beds for cars. Designed in Ontario, shipped across North America.</p>
+        <div class="social-row"><a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a><a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a><a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a><a href="#" aria-label="TikTok"><i data-lucide="music"></i></a></div>
+      </section>
+      <section><h2>SHOP</h2><a href="water-play.html">Kids Play</a><a href="car-travel.html">Car Travel</a><a href="accessories.html">Pumps &amp; Care</a></section>
+      <section><h2>HELP</h2><a href="#footer">Size &amp; fit guides</a><a href="#footer">Safety &amp; supervision</a><a href="#footer">Shipping policy</a><a href="#footer">Returns &amp; warranty</a></section>
+      <section><h2>SEASONAL TIPS</h2><p>Setup guides, winter storage and the odd restock alert. About one email a month.</p><form id="newsletterForm"><label class="sr-only" for="newsletterEmail">Email address</label><input id="newsletterEmail" type="email" placeholder="Email address" required><button type="submit" aria-label="Subscribe"><i data-lucide="arrow-right"></i></button></form></section>
+    </div>
+    <div class="shell footer-bottom"><span>&copy; 2026 AirHaven — local storefront demo.</span><div><span>AMEX</span><span>VISA</span><span>MC</span><span>PAY</span></div></div>
+  </footer>
+
+  <dialog class="quick-modal" id="quickModal">
+    <button class="modal-close icon-button" data-close="quickModal" aria-label="Close quick view"><i data-lucide="x"></i></button>
+    <div class="quick-modal-grid">
+      <div class="modal-image"><button class="media-arrow media-arrow--prev" id="mediaPrev" type="button" aria-label="Previous image" hidden><i data-lucide="chevron-left"></i></button><img id="modalImage" alt="" draggable="false"><button class="media-arrow media-arrow--next" id="mediaNext" type="button" aria-label="Next image" hidden><i data-lucide="chevron-right"></i></button><div class="media-thumbs" id="mediaThumbs" hidden></div></div>
+      <div class="modal-info">
+        <p class="eyebrow" id="modalEyebrow"></p>
+        <h2 id="modalTitle"></h2>
+        <p class="modal-price" id="modalPrice"></p>
+        <p id="modalDescription"></p>
+        <div class="variant-picker" id="variantPicker" hidden>
+          <span class="variant-label" id="variantLabel">Size</span>
+          <div class="variant-options" id="variantOptions" role="group" aria-labelledby="variantLabel"></div>
+        </div>
+        <dl class="attribute-list" id="attributeList"></dl>
+        <p class="stock-line" id="stockLine"></p>
+        <p class="demo-note"><i data-lucide="info"></i> Local demonstration only. No payment or order is submitted.</p>
+        <div class="modal-actions">
+          <div class="quantity"><button id="quantityMinus" aria-label="Decrease quantity"><i data-lucide="minus"></i></button><span id="quantityValue">1</span><button id="quantityPlus" aria-label="Increase quantity"><i data-lucide="plus"></i></button></div>
+          <button class="add-button" id="addToCart">Add to bag</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-head"><strong>Your bag</strong><button class="icon-button" data-close="cartDrawer" aria-label="Close bag"><i data-lucide="x"></i></button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer"><div><span>Subtotal</span><strong id="cartSubtotal">$0.00 CAD</strong></div><button type="button" id="checkoutButton">Demo checkout</button><small>No real transaction will occur.</small></div>
+  </aside>
+
+  <div class="search-panel" id="searchPanel" aria-hidden="true">
+    <div class="search-box"><i data-lucide="search"></i><input id="searchInput" type="search" placeholder="Search water parks, car beds, pumps" aria-label="Search products"><button class="icon-button" data-close="searchPanel" aria-label="Close search"><i data-lucide="x"></i></button></div>
+    <div class="search-results" id="searchResults"><p>Start typing to search the catalogue.</p></div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

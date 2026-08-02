@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Repair and care kit">
+  <rect x="66" y="176" width="268" height="150" rx="34" fill="#17B8D4"/>
+  <rect x="66" y="176" width="268" height="40" rx="20" fill="#0E9FBB"/>
+  <rect x="166" y="152" width="68" height="32" rx="16" fill="#0B7E96"/>
+  <rect x="96" y="238" width="90" height="62" rx="20" fill="#DFF4F8"/>
+  <circle cx="141" cy="269" r="18" fill="#FF6B4A"/>
+  <circle cx="141" cy="269" r="7" fill="#DFF4F8"/>
+  <rect x="212" y="238" width="42" height="62" rx="16" fill="#DFF4F8"/>
+  <rect x="222" y="222" width="22" height="20" rx="8" fill="#FFC53D"/>
+  <rect x="272" y="238" width="42" height="62" rx="16" fill="#DFF4F8"/>
+  <path d="M283 258h20M283 272h20M283 286h12" stroke="#7FD9E8" stroke-width="6" stroke-linecap="round"/>
+  <rect x="86" y="330" width="228" height="16" rx="8" fill="#DFF4F8"/>
+</svg>

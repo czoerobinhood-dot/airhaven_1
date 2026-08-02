@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Mini splash pad for toddlers">
+  <ellipse cx="200" cy="286" rx="150" ry="62" fill="#0E9FBB"/>
+  <ellipse cx="200" cy="272" rx="150" ry="62" fill="#17B8D4"/>
+  <ellipse cx="200" cy="270" rx="116" ry="46" fill="#DFF4F8"/>
+  <ellipse cx="200" cy="270" rx="116" ry="46" fill="none" stroke="#7FD9E8" stroke-width="5"/>
+  <g fill="#FF6B4A">
+    <circle cx="92" cy="252" r="14"/>
+    <circle cx="308" cy="252" r="14"/>
+    <circle cx="200" cy="222" r="14"/>
+  </g>
+  <g stroke="#7FD9E8" stroke-width="8" fill="none" stroke-linecap="round">
+    <path d="M92 236c-8-26 4-46 22-56"/>
+    <path d="M308 236c8-26-4-46-22-56"/>
+    <path d="M200 206c0-30 0-48 0-58"/>
+  </g>
+  <g fill="#7FD9E8">
+    <circle cx="126" cy="166" r="8"/>
+    <circle cx="274" cy="166" r="8"/>
+    <circle cx="200" cy="132" r="9"/>
+    <circle cx="158" cy="144" r="5"/>
+    <circle cx="242" cy="144" r="5"/>
+  </g>
+  <g fill="#FFC53D">
+    <circle cx="146" cy="272" r="11"/>
+    <circle cx="254" cy="272" r="11"/>
+    <circle cx="200" cy="288" r="11"/>
+  </g>
+</svg>

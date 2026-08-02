@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Electric air pumps and repair kits that fit every AirHaven inflatable — mains, 12V car socket or rechargeable.">
+  <title>Pumps &amp; Care — Air Pumps and Repair Kits | AirHaven</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="assets/lucide.min.js" defer></script>
+  <script src="data/catalog.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="collection" data-category="travel-accessories">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="demo-bar">LOCAL STOREFRONT DEMO <span>Orders are not processed</span></div>
+  <div class="announcement" aria-label="Store announcement">
+    <button class="announcement-arrow" id="announcementPrev" aria-label="Previous announcement"><i data-lucide="chevron-left"></i></button>
+    <a href="#products" id="announcementText">Free shipping across Canada on orders over $99</a>
+    <button class="announcement-arrow" id="announcementNext" aria-label="Next announcement"><i data-lucide="chevron-right"></i></button>
+  </div>
+
+  <div class="utility-bar">
+    <div class="shell utility-inner">
+      <a href="#footer"><i data-lucide="badge-check"></i> 2-year seam warranty on every inflatable</a>
+      <div class="utility-actions">
+        <a href="#footer" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <button class="locale-button" type="button" id="channelButton" aria-label="Switch sales channel"><span class="flag" id="channelFlag">CA</span> <span id="channelLabel">Canada (CAD $)</span> <i data-lucide="chevron-down"></i></button>
+        <button class="locale-button" type="button">English <i data-lucide="chevron-down"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="header">
+    <div class="shell header-inner">
+      <button class="icon-button mobile-menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false"><i data-lucide="menu"></i></button>
+      <a class="brand" href="index.html" aria-label="AirHaven home"><img src="assets/logo-airhaven.svg" alt="AirHaven"></a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="water-play.html">Kids Play</a>
+        <a href="car-travel.html">Car Travel</a>
+        <a class="active" href="accessories.html" aria-current="page">Pumps &amp; Care</a>
+        <a href="#footer">Support</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="searchButton" aria-label="Search"><i data-lucide="search"></i></button>
+        <button class="icon-button desktop-only" aria-label="Account"><i data-lucide="user-round"></i></button>
+        <button class="icon-button cart-button" id="cartButton" aria-label="Open shopping bag"><i data-lucide="shopping-bag"></i><span id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-head"><strong>Menu</strong><button class="icon-button" data-close="mobileDrawer" aria-label="Close navigation"><i data-lucide="x"></i></button></div>
+    <nav aria-label="Mobile navigation">
+      <a href="index.html">Home <i data-lucide="chevron-right"></i></a>
+      <a href="water-play.html">Kids Play <i data-lucide="chevron-right"></i></a>
+      <a href="car-travel.html">Car Travel <i data-lucide="chevron-right"></i></a>
+      <a href="accessories.html">Pumps &amp; Care <i data-lucide="chevron-right"></i></a>
+      <a href="#footer">Support <i data-lucide="chevron-right"></i></a>
+    </nav>
+  </aside>
+  <div class="page-overlay" id="pageOverlay"></div>
+
+  <main id="main-content">
+    <div class="shell breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Pumps &amp; Care</span></div>
+
+    <section class="page-head page-head--kit shell wave-bottom">
+      <div>
+        <p class="hero-tagline">Keep it inflated</p>
+        <h1>Pumps &amp; Care</h1>
+        <p class="hero-lede">One pump family fits every AirHaven product — mains, 12V car socket or rechargeable. Plus the patch kit worth keeping in the boot.</p>
+      </div>
+      <img src="assets/products/air-pump.svg" alt="">
+    </section>
+
+    <section class="collection shell" id="products" aria-label="Pumps and care products">
+      <aside class="filters" aria-label="Product filters">
+        <details open>
+          <summary>Availability <i data-lucide="chevron-up"></i></summary>
+          <label class="toggle-label"><input type="checkbox" id="inStockFilter"><span class="toggle"></span> In stock</label>
+        </details>
+        <details open>
+          <summary>Price <i data-lucide="chevron-up"></i></summary>
+          <p class="price-note" id="priceNote"></p>
+          <div class="price-fields">
+            <label><span>$</span><input id="minPrice" type="number" min="0" placeholder="0" aria-label="Minimum price"></label>
+            <span>-</span>
+            <label><span>$</span><input id="maxPrice" type="number" min="0" aria-label="Maximum price"></label>
+          </div>
+          <button class="apply-price" id="applyPrice" type="button">Apply</button>
+        </details>
+      </aside>
+
+      <div class="results">
+        <div class="collection-chips" id="categoryChips" role="group" aria-label="Categories"></div>
+        <div class="results-toolbar">
+          <button class="filter-mobile" id="filterButton" type="button"><i data-lucide="sliders-horizontal"></i> Filter</button>
+          <label class="sort-control">Sort by:
+            <select id="sortSelect">
+              <option value="featured" selected>Featured</option>
+              <option value="title-asc">Alphabetically, A-Z</option>
+              <option value="title-desc">Alphabetically, Z-A</option>
+              <option value="price-asc">Price, low to high</option>
+              <option value="price-desc">Price, high to low</option>
+            </select>
+          </label>
+          <span id="resultCount"></span>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state" id="emptyState" hidden><i data-lucide="package-search"></i><h2>No products found</h2><p>Try changing your price or availability filters.</p><button id="clearFilters" type="button">Clear filters</button></div>
+      </div>
+    </section>
+
+    <section class="cross-sell shell">
+      <div>
+        <h2>Need something to inflate?</h2>
+        <p>Both ranges ship with a pump already in the box — these are the spares and upgrades.</p>
+      </div>
+      <a class="button-ghost" href="water-play.html">Browse the catalogue <i data-lucide="arrow-right"></i></a>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="shell footer-grid">
+      <section>
+        <img class="footer-logo" src="assets/logo-airhaven.svg" alt="AirHaven">
+        <p>AirHaven builds inflatable water parks for backyards and inflatable beds for cars. Designed in Ontario, shipped across North America.</p>
+        <div class="social-row"><a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a><a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a><a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a><a href="#" aria-label="TikTok"><i data-lucide="music"></i></a></div>
+      </section>
+      <section><h2>SHOP</h2><a href="water-play.html">Kids Play</a><a href="car-travel.html">Car Travel</a><a href="accessories.html">Pumps &amp; Care</a></section>
+      <section><h2>HELP</h2><a href="#footer">Size &amp; fit guides</a><a href="#footer">Safety &amp; supervision</a><a href="#footer">Shipping policy</a><a href="#footer">Returns &amp; warranty</a></section>
+      <section><h2>SEASONAL TIPS</h2><p>Setup guides, winter storage and the odd restock alert. About one email a month.</p><form id="newsletterForm"><label class="sr-only" for="newsletterEmail">Email address</label><input id="newsletterEmail" type="email" placeholder="Email address" required><button type="submit" aria-label="Subscribe"><i data-lucide="arrow-right"></i></button></form></section>
+    </div>
+    <div class="shell footer-bottom"><span>&copy; 2026 AirHaven — local storefront demo.</span><div><span>AMEX</span><span>VISA</span><span>MC</span><span>PAY</span></div></div>
+  </footer>
+
+  <dialog class="quick-modal" id="quickModal">
+    <button class="modal-close icon-button" data-close="quickModal" aria-label="Close quick view"><i data-lucide="x"></i></button>
+    <div class="quick-modal-grid">
+      <div class="modal-image"><button class="media-arrow media-arrow--prev" id="mediaPrev" type="button" aria-label="Previous image" hidden><i data-lucide="chevron-left"></i></button><img id="modalImage" alt="" draggable="false"><button class="media-arrow media-arrow--next" id="mediaNext" type="button" aria-label="Next image" hidden><i data-lucide="chevron-right"></i></button><div class="media-thumbs" id="mediaThumbs" hidden></div></div>
+      <div class="modal-info">
+        <p class="eyebrow" id="modalEyebrow"></p>
+        <h2 id="modalTitle"></h2>
+        <p class="modal-price" id="modalPrice"></p>
+        <p id="modalDescription"></p>
+        <div class="variant-picker" id="variantPicker" hidden>
+          <span class="variant-label" id="variantLabel">Size</span>
+          <div class="variant-options" id="variantOptions" role="group" aria-labelledby="variantLabel"></div>
+        </div>
+        <dl class="attribute-list" id="attributeList"></dl>
+        <p class="stock-line" id="stockLine"></p>
+        <p class="demo-note"><i data-lucide="info"></i> Local demonstration only. No payment or order is submitted.</p>
+        <div class="modal-actions">
+          <div class="quantity"><button id="quantityMinus" aria-label="Decrease quantity"><i data-lucide="minus"></i></button><span id="quantityValue">1</span><button id="quantityPlus" aria-label="Increase quantity"><i data-lucide="plus"></i></button></div>
+          <button class="add-button" id="addToCart">Add to bag</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-head"><strong>Your bag</strong><button class="icon-button" data-close="cartDrawer" aria-label="Close bag"><i data-lucide="x"></i></button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer"><div><span>Subtotal</span><strong id="cartSubtotal">$0.00 CAD</strong></div><button type="button" id="checkoutButton">Demo checkout</button><small>No real transaction will occur.</small></div>
+  </aside>
+
+  <div class="search-panel" id="searchPanel" aria-hidden="true">
+    <div class="search-box"><i data-lucide="search"></i><input id="searchInput" type="search" placeholder="Search water parks, car beds, pumps" aria-label="Search products"><button class="icon-button" data-close="searchPanel" aria-label="Close search"><i data-lucide="x"></i></button></div>
+    <div class="search-results" id="searchResults"><p>Start typing to search the catalogue.</p></div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

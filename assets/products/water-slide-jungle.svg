@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Jungle climb water slide">
+  <rect x="72" y="150" width="92" height="182" rx="30" fill="#3FBF7F"/>
+  <rect x="90" y="176" width="56" height="90" rx="18" fill="#DFF4F8"/>
+  <g stroke="#0E9FBB" stroke-width="7" stroke-linecap="round">
+    <path d="M104 200h28M104 222h28M104 244h28"/>
+  </g>
+  <path d="M164 196c74 14 110 66 110 136" stroke="#17B8D4" stroke-width="46" fill="none" stroke-linecap="round"/>
+  <path d="M164 196c74 14 110 66 110 136" stroke="#DFF4F8" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <circle cx="118" cy="140" r="16" fill="#FFC53D"/>
+  <path d="M72 150h92l-46-32z" fill="#FF6B4A"/>
+  <rect x="46" y="326" width="308" height="36" rx="18" fill="#DFF4F8"/>
+  <path d="M60 345c20-10 40-10 60 0s40 10 60 0 40-10 60 0 40 10 60 0" stroke="#17B8D4" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <g fill="#7FD9E8">
+    <circle cx="286" cy="272" r="9"/>
+    <circle cx="312" cy="240" r="6"/>
+    <circle cx="258" cy="248" r="5"/>
+  </g>
+</svg>

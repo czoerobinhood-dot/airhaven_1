@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Inflatable backseat gap cushion">
+  <rect x="86" y="214" width="228" height="100" rx="42" fill="#0E9FBB"/>
+  <rect x="86" y="200" width="228" height="100" rx="42" fill="#17B8D4"/>
+  <g stroke="#7FD9E8" stroke-width="7" stroke-linecap="round">
+    <path d="M134 216v68M182 216v68M230 216v68M278 216v68"/>
+  </g>
+  <rect x="110" y="136" width="180" height="52" rx="24" fill="#DFF4F8"/>
+  <rect x="132" y="152" width="136" height="20" rx="10" fill="#B9E4EE"/>
+  <circle cx="322" cy="228" r="22" fill="#FF6B4A"/>
+  <rect x="314" y="204" width="16" height="20" rx="8" fill="#F2522F"/>
+  <rect x="96" y="322" width="208" height="18" rx="9" fill="#DFF4F8"/>
+  <circle cx="86" cy="170" r="12" fill="#FFC53D"/>
+</svg>
