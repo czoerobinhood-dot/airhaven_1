@@ -402,6 +402,30 @@ footer { padding: 70px 0 26px; background: var(--ink); color: #d9cbbc; }
 .toast { position: fixed; z-index: 100; right: 25px; bottom: 25px; max-width: 340px; visibility: hidden; transform: translateY(15px); opacity: 0; padding: 15px 20px; background: var(--ink); color: #fff; border-radius: var(--radius-input); box-shadow: var(--shadow-lift); font-size: 15px; font-weight: 700; transition: .2s ease; }
 .toast.show { visibility: visible; transform: translateY(0); opacity: 1; }
 
+/* -------------------------- Return policy page -------------------------- */
+.policy-hero { margin: 0 0 52px; padding: 54px 0 60px; background: var(--pool-100); border-top: 1px solid var(--pool-200); border-bottom: 1px solid var(--pool-200); }
+.policy-hero .hero-tagline { margin-bottom: 14px; background: #fff; color: var(--pool-700); }
+.policy-hero h1 { margin: 0 0 14px; color: var(--ink); font-size: clamp(32px, 4vw, 48px); }
+.policy-hero p:last-child { max-width: 610px; margin: 0; color: var(--ink-soft); font-size: 17px; line-height: 1.6; }
+.policy-layout { display: grid; grid-template-columns: 220px minmax(0, 760px); align-items: start; gap: 72px; margin-bottom: 86px; }
+.policy-nav { position: sticky; top: 24px; display: grid; gap: 8px; padding: 4px 0 4px 18px; border-left: 2px solid var(--pool-300); }
+.policy-nav strong { margin-bottom: 7px; color: var(--ink); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+.policy-nav a { color: var(--ink-soft); font-size: 14px; font-weight: 700; line-height: 1.4; }
+.policy-nav a:hover { color: var(--orange-600); }
+.policy-content { min-width: 0; }
+.policy-intro { margin: 0 0 30px; color: var(--ink); font-family: var(--font-display); font-size: 21px; font-weight: 700; line-height: 1.45; }
+.policy-item { scroll-margin-top: 24px; border-top: 1px solid var(--line); }
+.policy-item:last-child { border-bottom: 1px solid var(--line); }
+.policy-item summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 23px 2px; color: var(--ink); font-family: var(--font-display); font-size: 20px; font-weight: 800; cursor: pointer; list-style: none; }
+.policy-item summary::-webkit-details-marker { display: none; }
+.policy-item summary span { display: inline-flex; align-items: center; gap: 12px; }
+.policy-item summary span svg { width: 20px; color: var(--pool-600); stroke-width: 2; }
+.policy-item summary > svg { width: 20px; color: var(--ink-soft); transition: transform .2s ease; }
+.policy-item[open] summary > svg { transform: rotate(180deg); }
+.policy-item > div { padding: 0 2px 25px 34px; }
+.policy-item p { max-width: 680px; margin: 0; color: var(--ink-soft); font-size: 16px; line-height: 1.72; }
+.policy-item a { color: var(--orange-600); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+
 /* ------------------------------ Responsive ------------------------------- */
 @media (max-width: 1180px) {
   .header-inner { grid-template-columns: 150px minmax(0,1fr) 130px; gap: 14px; }
@@ -434,6 +458,9 @@ footer { padding: 70px 0 26px; background: var(--ink); color: #d9cbbc; }
   .product-strip > :nth-child(n+3) { display: none; }
   .split-banner { grid-template-columns: 1fr; }
   .cross-sell { flex-direction: column; align-items: flex-start; }
+  .policy-layout { grid-template-columns: 1fr; gap: 30px; margin-bottom: 68px; }
+  .policy-nav { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 20px; padding: 18px; border: 1px solid var(--pool-300); background: var(--pool-100); }
+  .policy-nav strong { grid-column: 1 / -1; }
   .footer-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 40px; }
 }
 
@@ -480,6 +507,13 @@ footer { padding: 70px 0 26px; background: var(--ink); color: #d9cbbc; }
   .product-card h2 { min-height: 44px; font-size: 15px; }
   .product-card .price { font-size: 16px; }
   .collection { padding-bottom: 64px; }
+  .policy-hero { margin-bottom: 36px; padding: 36px 0 42px; }
+  .policy-hero p:last-child { font-size: 16px; }
+  .policy-nav { grid-template-columns: 1fr; padding: 16px; }
+  .policy-intro { margin-bottom: 24px; font-size: 19px; }
+  .policy-item summary { padding: 19px 0; font-size: 18px; }
+  .policy-item > div { padding: 0 0 22px; }
+  .policy-item p { font-size: 15px; }
   footer { padding-top: 50px; }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { display: block; margin-top: 44px; }
