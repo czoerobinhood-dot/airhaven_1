@@ -575,7 +575,15 @@
         alt: 'Whack-a-Mole Bounce House with slide set up on a lawn',
         type: 'IMAGE',
         sortOrder: 0
-      }],
+      },
+        { id: gid('ProductMedia', 1302), url: 'assets/photos/gallery/wam-02.jpg', alt: 'Whack-a-Mole Bounce House — gallery image 2', type: 'IMAGE', sortOrder: 1 },
+        { id: gid('ProductMedia', 1303), url: 'assets/photos/gallery/wam-03.jpg', alt: 'Whack-a-Mole Bounce House — gallery image 3', type: 'IMAGE', sortOrder: 2 },
+        { id: gid('ProductMedia', 1304), url: 'assets/photos/gallery/wam-04.jpg', alt: 'Whack-a-Mole Bounce House — gallery image 4', type: 'IMAGE', sortOrder: 3 },
+        { id: gid('ProductMedia', 1305), url: 'assets/photos/gallery/wam-05.jpg', alt: 'Whack-a-Mole Bounce House — gallery image 5', type: 'IMAGE', sortOrder: 4 },
+        { id: gid('ProductMedia', 1306), url: 'assets/photos/gallery/wam-06.jpg', alt: 'Whack-a-Mole Bounce House — gallery image 6', type: 'IMAGE', sortOrder: 5 },
+        { id: gid('ProductMedia', 1307), url: 'assets/photos/gallery/wam-07.jpg', alt: 'Whack-a-Mole Bounce House — gallery image 7', type: 'IMAGE', sortOrder: 6 },
+        { id: gid('ProductMedia', 1308), url: 'assets/photos/gallery/wam-08.jpg', alt: 'Whack-a-Mole Bounce House — gallery image 8', type: 'IMAGE', sortOrder: 7 }
+      ],
       channelListings: publishedEverywhere,
       defaultVariant: 'AN-WAM-STD',
       variants: [
