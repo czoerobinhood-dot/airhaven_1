@@ -5,7 +5,7 @@
   "description": "AirHaven local storefront demo",
   "scripts": {
     "start": "node server.js",
-    "check": "node --check server.js && node --check app.js && node --check i18n.js && node --check data/catalog.js"
+    "check": "node --check server.js && node --check app.js && node --check i18n.js && node --check data/catalog.js && node --check auth.js"
   },
   "dependencies": {
     "chen99-easy-translate": "1.0.1"

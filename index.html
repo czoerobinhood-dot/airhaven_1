@@ -8,8 +8,12 @@
   <link rel="stylesheet" href="styles.css">
   <script src="assets/lucide.min.js" defer></script>
   <script src="data/catalog.js" defer></script>
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.1/auth0-spa-js.production.js" defer></script>
+  <script src="auth.js" defer></script>
   <script src="app.js" defer></script>
+  <!-- Translation temporarily disabled for static hosting.
   <script src="i18n.js" defer></script>
+  -->
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -27,7 +31,9 @@
       <div class="utility-actions">
         <a href="#footer" aria-label="Instagram"><i data-lucide="instagram"></i></a>
         <button class="locale-button" type="button" id="channelButton" aria-label="Switch sales channel"><span class="flag" id="channelFlag">CA</span> <span id="channelLabel">Canada (CAD $)</span> <i data-lucide="chevron-down"></i></button>
+        <!-- Translation temporarily disabled for static hosting.
         <label class="locale-button language-control" for="languageSelect" data-no-translate><span class="sr-only">Language</span><select id="languageSelect" aria-label="Language"><option value="en">English</option></select></label>
+        -->
       </div>
     </div>
   </div>
@@ -45,7 +51,7 @@
       </nav>
       <div class="header-actions">
         <button class="icon-button" id="searchButton" aria-label="Search"><i data-lucide="search"></i></button>
-        <button class="icon-button desktop-only" aria-label="Account"><i data-lucide="user-round"></i></button>
+        <button class="icon-button desktop-only auth-button" type="button" data-auth-button aria-label="Sign in"><i data-lucide="user-round"></i><span class="auth-button-label">Sign in</span></button>
         <button class="icon-button cart-button" id="cartButton" aria-label="Open shopping bag"><i data-lucide="shopping-bag"></i><span id="cartCount">0</span></button>
       </div>
     </div>
@@ -59,6 +65,7 @@
       <a href="car-travel.html">Car Travel <i data-lucide="chevron-right"></i></a>
       <a href="accessories.html">Pumps &amp; Care <i data-lucide="chevron-right"></i></a>
       <a href="#footer">Support <i data-lucide="chevron-right"></i></a>
+      <button class="mobile-auth-button" type="button" data-auth-button aria-label="Sign in"><i data-lucide="user-round"></i><span class="auth-button-label">Sign in</span><i data-lucide="chevron-right"></i></button>
     </nav>
   </aside>
   <div class="page-overlay" id="pageOverlay"></div>
